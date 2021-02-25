@@ -1,3 +1,6 @@
+/*
+2644번 촌수계산 
+*/
 #include <stdio.h>
 int n, start, finish;
 int arr[101][101]={0};
