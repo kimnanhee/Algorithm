@@ -9,13 +9,11 @@ int chon=0, last_chon;
 	
 void BFS(int a)
 {
-//	printf("visit %d\n", a);
 	visit[a]=1;
 	chon++;
 	if(a==finish) 
 	{
 		last_chon=chon;
-//		printf("---------------------------------\n");
 		return;
 	}
 	
@@ -25,7 +23,6 @@ void BFS(int a)
 		if(visit[i]==0 && arr[a][i]==1) BFS(i);
 	}
 	chon--;
-//	printf("back\n");
 }
 
 int main()
