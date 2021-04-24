@@ -14,10 +14,7 @@
 포도주의 양은 1,000 이하의 음이 아닌 정수이다.
 */
 #include <stdio.h>
-int MAX(int a, int b, int c)
-{
-	return ( (a>b ? a:b)>c ? (a>b ? a:b):c );
-}
+#define MAX(a, b, c) ((a>b ? a:b)>c ? (a>b ? a:b):c);
 int main()
 {
 	int n, i;
@@ -32,7 +29,10 @@ int main()
 	dp[2] = dp[1]+arr[2];
 	
 	for(i=3; i<=n; i++)
+	{
 		dp[i] = MAX(arr[i]+arr[i-1]+dp[i-3], arr[i]+dp[i-2], dp[i-1]);
+		printf("%d - %d\n", i, dp[i]);
+	}
 		
 	printf("%d", dp[n]);
 	return 0;
