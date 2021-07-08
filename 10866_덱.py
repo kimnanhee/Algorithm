@@ -28,10 +28,10 @@ for _ in range(int(input())):
         deq.append(com[1])
 
     elif com[0]=="pop_front":
-        print(deq.popleft() if len(deq)>0 else "-1")
+        print(deq.popleft() if len(deq) else "-1")
 
     elif com[0]=="pop_back":
-        print(deq.pop() if len(deq)>0 else "-1")
+        print(deq.pop() if len(deq) else "-1")
 
     elif com[0]=="size":
         print(len(deq))
