@@ -18,7 +18,6 @@ arr = [0 for _ in range(M)]
 
 def dfs(num, depth):
     global arr, visit
-    print(depth, "-", arr)
 
     if depth == M:
         for i in arr:
