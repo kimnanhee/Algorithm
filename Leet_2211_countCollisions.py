@@ -1,5 +1,8 @@
 class Solution:
     def countCollisions(self, directions: str) -> int:
+        # 양 끝을 제외하고 가운데 충동하는 부분만 계산
+        # return len(directions.lstrip('L').rstrip('R').replace('S', ''))
+    
         directions = list(directions)
 
         cnt = 0 # 충돌 횟수
